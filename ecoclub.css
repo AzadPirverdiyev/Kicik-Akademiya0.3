@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  header{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      gap: 50px;
+      box-shadow: 0 0 13px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #fff;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    position: relative; /* Mobil menüyü açık tutmak için gerekli */
+  }
+  .image {
+    width: 40px; /* Resmin genişliğini ve yüksekliğini ihtiyacınıza göre ayarlayın */
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: none; /* Fotorafı başlangıçta gizle */
+    transition: 2s all;
+  }
+  .links {
+    display: flex;
+    font-weight: 500; /* Linkleri başlangıçta göster */
+  }
+  ::selection{
+    background-color: #ebc7b5;
+  }
+  .links a {
+    display: block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    transition: 1s all;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 19px;
+  }
+  .links a:hover{
+    color:rgb(2, 176, 176)
+  }
+  .close-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #menu.show .close-button {
+    display: block;
+  }
+  .main-words h1{
+    font-size: 60px;
+    color: orange;
+    position: relative;
+  }
+  .main-part{
+    margin-bottom:230px;
+  }
+  span{
+    color: rgb(2, 176, 176);
+  }
+  .links .active {
+    color:rgb(2, 176, 176);
+  }
+  .img-wrapper img{
+    border-radius: 40px;
+    border-left: solid 5px rgb(2, 176, 176);
+    border-right: solid 5px rgb(2, 176, 176);
+    border-top: solid 5px orange;
+    border-bottom: solid 5px orange;
+  }
+  .section1-wrapper{
+    background-color: #e1e1e1;
+    padding: 29px;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+  }
+  .image-wrapper img{
+    width:100%;
+    height: 300px;
+    position: relative;
+    filter: blur(3px);
+    
+  }
+  .image-wrapper h1{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 60px;
+    text-shadow: 2px 2px 5px black;
+  }
+  .img img{
+    border-radius: 40px;
+    width: 350px;
+    border-left: solid 5px rgb(2, 176, 176);
+    border-right: solid 5px rgb(2, 176, 176);
+    border-top: solid 5px orange;
+    border-bottom: solid 5px orange;
+  }
+  .word-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 180px;
+  }
+  .word-wrapper h1{
+    font-size: 40px;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+  .links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Fotorafa tıklandığında göster */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+  }
+  
+  #menu.show .links {
+    display: block;
+  }
+  
+  .links a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  .image {
+    display: block; /* Mobilde fotorafı göster */
+  } 
+  .section1-wrapper{
+    display: block;
+  }
+  .section1-wrapper img{
+    display: none;
+  }
+  .section1-wrapper h1{
+    text-align: center;
+  }
+  .section1-wrapper p{
+    text-align: center;
+  }
+  .word h1{
+    display: none;
+  }
+  .word p{
+    text-align: center;
+  }
+  .section-wrapper{
+    align-items: center;
+    text-align: center;
+  }
+  p{
+    min-width: 300px;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .img img{
+    display: none !important;
+  }
+}
